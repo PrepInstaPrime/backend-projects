@@ -1,3 +1,8 @@
+## Work distribution
+- Amlan: Book Api
+- Abhijit: Review Api, frontend file upload
+- Deewas: User Api, Authentication, Authorization 
+
 ## Project - Books Management
 
 ### Key points

@@ -1,32 +1,31 @@
 {
   "name": "bookmanagement",
   "version": "1.0.0",
-  "description": "FSD Project 2",
-  "homepage": "https://github.com/PhoenixBWS/bookmanagement#readme",
-  "bugs": {
-    "url": "https://github.com/PhoenixBWS/bookmanagement/issues"
+  "description": "FSD project 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PhoenixBWS/bookmanagement.git"
+    "url": "git+https://github.com/Abhijit-Singh-02/projects.git#main"
   },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Abhijit Singh",
   "license": "ISC",
-  "author": "Amlan Das Karmakar",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "node server.js"
+  "bugs": {
+    "url": "https://github.com/Abhijit-Singh-02/projects/issues"
   },
+  "homepage": "https://github.com/Abhijit-Singh-02/projects/tree/main#readme",
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1000.0",
-    "@aws-sdk/s3-request-presigner": "^3.1000.0",
     "aws-sdk": "^2.1693.0",
     "bcrypt": "^6.0.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.2.3",
-    "multer": "^2.0.2",
-    "multer-s3": "^3.0.1"
+    "mongoose": "^9.2.4",
+    "multer": "^2.1.1"
   }
 }

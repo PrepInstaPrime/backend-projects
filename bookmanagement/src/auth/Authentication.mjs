@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import config from "../../config.js";
+import config from "../../config.mjs";
 
 const secretKey = config.JWTSecret || "your_secret_key";
 

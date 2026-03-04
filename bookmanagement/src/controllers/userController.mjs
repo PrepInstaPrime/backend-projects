@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
-import Users from '../models/users.js';
-import * as Auth from '../auth/jwt.js';
+import Users from '../models/userModel.mjs';
+import { generateToken } from '../auth/authentication.mjs';
 
 const register = async (req, res) => {
     try {
@@ -21,7 +21,7 @@ const login = async (req, res) => {
             return res.status(401).json({ status: false, message: 'Invalid email or password' });
         }
 
-        const token = Auth.generateToken(user._id);
+        const token = generateToken(user._id);
         res.status(200).json({ status: true, data: { token } });
     } catch (error) {
         res.status(500).json({ status: false, message: 'Failed to login' });
