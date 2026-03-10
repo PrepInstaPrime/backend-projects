@@ -1,0 +1,10 @@
+import express from "express";
+import upload from "./config/multer.mjs";
+import {createProduct,getProducts,getProductById,updateProduct,deleteProduct,} from "./controllers/productController.mjs";
+const router = express.Router();
+router.post("/products", upload.single("productImage"), createProduct);
+router.get("/products", getProducts);
+router.get("/products/:productId", getProductById);
+router.put("/products/:productId", updateProduct);
+router.delete("/products/:productId", deleteProduct);
+export default router;
