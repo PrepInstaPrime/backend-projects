@@ -1,0 +1,13 @@
+import express from "express";
+const router = express.Router();
+import { registerUser, loginUser, getUser, updateUser } from "./controllers/userController.mjs";
+import { createReport, getReports, updateReport } from "./controllers/reportController.mjs";
+import { authenticate,authorize } from "./auth/authentication.mjs";
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.get("/getUser/:userId", authenticate, getUser);
+router.put("/updateUser/:userId", authenticate, updateUser);
+router.post("/create", authenticate, authorize, createReport);
+router.get("/getreports", authenticate, getReports);
+router.put("/updatereport/:reportId", authenticate, updateReport);
+export default router;
